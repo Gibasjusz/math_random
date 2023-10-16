@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try1</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <script>
+
+        function obojetna_nazwa() {
+
+            x = Math.random();
+            x = (x * 50);
+            x = Math.floor(x);
+            let button = document.getElementById("button1");
+            console.log('zmienna x = ', x);
+            button.setAttribute("class", "styl2");
+        }
+
+        document.addEventListener('keydown', function(e) {
+            switch (e.keyCode) {
+                case 13:
+                    obojetna_nazwa()
+                break;
+            }
+        });
+
+        document.addEventListener('keyup', function(e) {
+            switch (e.keyCode) {
+                case 13:
+                    let button = document.getElementById("button1");
+                    button.setAttribute("class", "styl1");
+                break;
+            }
+        });
+    </script>
+    <section class="ekran">
+        <button class="styl1" onclick="obojetna_nazwa()" id="button1"><b>AKTYWUJ</b></button>
+    </section>
+</body>
+</html>
